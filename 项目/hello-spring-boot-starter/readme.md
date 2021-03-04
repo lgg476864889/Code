@@ -1,3 +1,5 @@
+这是个创建springboot的starter包的demo
+
 1.通过maven的install打包
 2.在需要的项目中引用
 
