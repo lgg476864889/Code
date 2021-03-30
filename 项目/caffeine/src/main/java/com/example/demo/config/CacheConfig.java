@@ -22,8 +22,8 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class CacheConfig {
 
-    //配置CacheManager
-    @Bean(name = "caffeine")
+    //配置CacheManager  这个是配合spring cahche注解使用的
+    @Bean(name = "caffeineCacheManager")
     public CacheManager cacheManagerWithCaffeine() {
 
         CaffeineCacheManager cacheManager = new CaffeineCacheManager();
@@ -41,7 +41,7 @@ public class CacheConfig {
         cacheManager.setAllowNullValues(false);//是否允许值为空
         return cacheManager;
     }
-
+    //这个是用来手动设置缓存
     @Bean
     public Cache<String, Object> caffeineCache() {
         return Caffeine.newBuilder()

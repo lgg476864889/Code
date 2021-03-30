@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description
  **/
 @RestController
+//配合spring cach注解
+//@CacheConfig(cacheNames = "caffeineCacheManager")
 public class Cach {
 
     @Autowired
